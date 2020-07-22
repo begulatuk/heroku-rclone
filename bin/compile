@@ -7,7 +7,7 @@ indent() {
 echo "-----> Install rclone"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-FILE="rclone.zip"
+FILE="rclone"
 DOWNLOAD_URL="https://github.com/xinxin8816/heroku-ariang-21vianet/raw/master/rclone.zip"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
@@ -20,7 +20,7 @@ cd rclone
 wget -q $DOWNLOAD_URL
 unzip -qqj rclone.zip
 rm -rf rclone.zip
-chmod 777 rclone
+chmod 777 /app/rclone
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/rclone.sh"
